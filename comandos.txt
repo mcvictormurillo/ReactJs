@@ -1,0 +1,65 @@
+Para iniciar un proyecto ocn react
+=>  $ npm install -g create-react-app
+
+crear proyecto
+=>  create-react-app _nombre_proyecto
+=>  cd _nombre_proyecto
+
+correr aplicacion
+=> npm run start ; la aplicacion se presenta en el navegador
+
+CLASE : 4
+import React from 'react'; es el analogo a document.creacteElement
+import ReactDOM from 'react-dom'; es el analogo al apendChild
+
+JSX: siempre que lo usemos debemos importar react
+ReactDOM.render(_que elemento_ , _donde_) 
+
+JSX tiene como alternativa  React,creacteElement
+const element = React.createElement('h1',{ Atributos},children)
+
+Ejemplo:
+const jxs = (
+    <div>
+        <h1>Hola soy {name}</h1>
+        <p>Soy ingeniero FrontEnd</p>
+    </div>
+);
+
+const elementR = React.createElement(
+    'div',
+    {},
+    React.createElement('h1',{},`Hola soy ${name}`),
+    React.createElement('p',{},'Soy ingeniero Front End')
+);
+ReactDOM.render(elementR,container) 
+
+Nota: React es javascript!
+
+=================================================================================
+¿Componentes?
+Es un bloque de construccion, similiar a figuras de lego.
+Son piezas que juntamos para crear un Website
+Unidad basica de desarrollo
+
+Un componente es una CLASE
+un elemento es un objeto
+Un elemnto es a un objeto lo que un componente es a una clase.
+
+Si el objeto es una casa
+El componente en el plano para hacer la casa
+
+Como sabes que es un componente?
+¿Que elementos se repiten?
+=> Elementos en una lista
+    Cards
+=> Elementos que comparten un aspecto visual o de funcionalidad
+    Switch o deslizadores, todos se ven igual
+
+¿Que elementos cumplen una funcion especifica?
+Sirven para encapsular logica
+Como una barra de busqueda que mientras el usuario escribe muestra logica y hace penticiones 
+llevando a una nueva pagina
+
+NOTA: Identificar componentes es una habilidad esencial para desarrollar aplicaciones en REACT
+
